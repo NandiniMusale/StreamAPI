@@ -3,8 +3,10 @@ import java.util.List;
 public class problem7 {
     public static void main(String[] args) {
         List<Integer> l1 =List.of(1,2,3,4,5,6,7,8,9);
+        List<Integer> l0 =List.of(2,5,3);
         List<Integer> l2= l1.stream().filter(prime::primer).toList();
         System.out.println(l2);
+        System.out.println(l0.stream().allMatch(n -> prime.primer(n)));
     }
 }
 class prime{
